@@ -1,1 +1,166 @@
-<p>hello world</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects Showcase</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+        }
+
+        header {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+        }
+
+        .grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 16px;
+            padding: 16px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .card {
+            flex: 0 1 calc(33.333% - 32px); /* minus gap */
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform .2s;
+            background-color: #ffffff;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+        }
+
+        .card img {
+            width: 100%;
+            max-height: 200px;
+            object-fit: cover;
+        }
+
+        .card-content {
+            padding: 12px;
+        }
+
+        .card-title {
+            font-weight: bold;
+            margin-top: 0;
+        }
+
+        .card-description {
+            margin-top: 8px;
+            font-size: 0.9em;
+            color: #777;
+        }
+
+        footer {
+			background-color: #222;
+			padding: 20px 0;
+		}
+
+		.footer-title {
+			font-size: 1.5em;
+			color: #eee;
+			text-align: center;
+			margin-bottom: 20px;
+		}
+
+		.team-members {
+			display: flex;
+			justify-content: center;
+			gap: 16px;
+			flex-wrap: wrap; /* Ensures responsiveness */
+		}
+
+		.member {
+			width: 150px;
+			text-align: center;
+		}
+
+		.member img {
+			width: 100px;
+			height: 100px;
+			border-radius: 50%;
+			object-fit: cover;
+			border: 2px solid #eee;
+			margin-bottom: 8px;
+		}
+
+		.member-name {
+			color: #eee;
+			font-weight: bold;
+		}
+
+		.member-email {
+			color: #aaa;
+			font-size: 0.85em;
+		}
+
+        /* Responsive */
+        @media screen and (max-width: 992px) {
+            .card {
+                flex: 0 1 calc(50% - 16px);
+            }
+        }
+
+        @media screen and (max-width: 600px) {
+            .card {
+                flex: 0 1 100%;
+            }
+            .team-members {
+				flex-direction: column;
+				gap: 24px;
+			}
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <img src="path_to_your_logo.jpg" alt="Your Logo" width="100">
+    </header>
+
+    <section class="grid">
+        <!-- Example card -->
+        <div class="card">
+            <img src="path_to_project_image.jpg" alt="Project Title">
+            <div class="card-content">
+                <h3 class="card-title">Project Title</h3>
+                <p class="card-description">Short description of the project.</p>
+            </div>
+        </div>
+        <!-- Add more cards as needed -->
+    </section>
+
+    <footer>
+		<h2 class="footer-title">Contact Us</h2>
+		<div class="team-members">
+			<div class="member">
+				<img src="path_to_team_member1.jpg" alt="Member 1 Name">
+				<div class="member-name">Member 1 Name</div>
+				<div class="member-email"><a href="mailto:member1@domain.com" style="color: #aaa;">member1@domain.com</a></div>
+			</div>
+			<div class="member">
+				<img src="path_to_team_member2.jpg" alt="Member 2 Name">
+				<div class="member-name">Member 2 Name</div>
+				<div class="member-email"><a href="mailto:member2@domain.com" style="color: #aaa;">member2@domain.com</a></div>
+			</div>
+			<div class="member">
+				<img src="path_to_team_member3.jpg" alt="Member 3 Name">
+				<div class="member-name">Member 3 Name</div>
+				<div class="member-email"><a href="mailto:member3@domain.com" style="color: #aaa;">member3@domain.com</a></div>
+			</div>
+		</div>
+	</footer>
+</body>
+</html>
+
